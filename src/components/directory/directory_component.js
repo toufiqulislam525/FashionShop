@@ -1,11 +1,11 @@
-import './categories.styles.scss'
+import './directory_styles.scss'
 import CategoryItem from '../category-item/category-item_component' 
 
 
 const Directory = ({categories})=>{
 
     return(
-        <div className = "categories-container outerdiv">
+        <div className = "directory-container outerdiv">
           {
             categories.map( 
               (category) => 
