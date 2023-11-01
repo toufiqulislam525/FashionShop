@@ -43,16 +43,20 @@ const SignUpForm = ()=>{
             const already_in_use = 'auth/email-already-in-use';
 
             let error_message = '';
-            if (error.code === already_in_use){
-                if(error_message){error_message+=' and ' }
-                error_message = error_message + 'Email already in Use';
-            }
-            if (error.code === password_problem){
-                if(error_message){error_message+=' and ' }
-                error_message = error_message + 'Please enter valid Password';
+
+            switch(error.code){
+                case password_problem:
+                    alert('Please enter valid password');
+                    break;
+                
+                case already_in_use:
+                    alert('Email already in Use');
+                    break;
+                
+                default :
+                    alert(error.code.slice(5).toUpperCase());
             }
             
-            alert(error_message);
             
 
         }
