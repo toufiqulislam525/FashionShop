@@ -42,8 +42,6 @@ const SignUpForm = ()=>{
             const password_problem = 'auth/weak-password';
             const already_in_use = 'auth/email-already-in-use';
 
-            let error_message = '';
-
             switch(error.code){
                 case password_problem:
                     alert('Please enter valid password');
