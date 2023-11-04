@@ -4,6 +4,7 @@ import FormInput from '../form-input/form-input_component';
 import Button from "../button/button_component";
 import './sign-up-form_styles.scss';
 
+
 const defaultFormFields = {
     displayName:'',
     email: '',
@@ -15,6 +16,8 @@ const SignUpForm = ()=>{
 
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {displayName , email, password, confirmPassword} = formFields;
+
+    
 
     const resetFormFields = ()=>{
         setFormFields(defaultFormFields);
